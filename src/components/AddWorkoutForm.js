@@ -16,7 +16,7 @@ export default function AddWorkoutForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5001/api/workouts', { date, description, trainer: trainerName });
+      await axios.post('http://localhost:5006/api/workouts', { date, description, trainer: trainerName });
       alert('Entrenamiento añadido con éxito');
       setDate('');
       setDescription('');
