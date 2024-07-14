@@ -1,24 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
-import { getWorkouts } from '../services/api';
 
-export default function WorkoutSchedule() {
-  const [workouts, setWorkouts] = useState([]);
-
-  useEffect(() => {
-    const fetchWorkouts = async () => {
-      try {
-        const response = await getWorkouts();
-        setWorkouts(response.data);
-      } catch (error) {
-        console.error('Error fetching workouts:', error);
-      }
-    };
-
-    fetchWorkouts();
-  }, []);
 
 export default function WorkoutSchedule() {
   const [selectedDate, setSelectedDate] = useState(new Date());
