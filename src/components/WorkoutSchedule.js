@@ -13,7 +13,7 @@ export default function WorkoutSchedule() {
 
   const fetchWorkouts = async () => {
     try {
-      const response = await axios.get('http://localhost:5001/api/workouts');
+      const response = await axios.get('http://localhost:5006/api/workouts');
       const workoutMap = response.data.reduce((acc, workout) => {
         acc[new Date(workout.date).toDateString()] = workout.description;
         return acc;
